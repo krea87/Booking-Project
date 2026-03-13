@@ -1,0 +1,120 @@
+.primary-navbar {
+  --navbar-transition: 600ms
+    linear(
+      0,
+      0.011 0.7%,
+      0.043 1.4%,
+      0.176 3%,
+      0.859 8.3%,
+      1.091 10.5%,
+      1.235 12.6%,
+      1.278 13.7%,
+      1.299 14.8%,
+      1.3 16.2%,
+      1.273 17.7%,
+      1.223 19.3%,
+      1.054 23.5%,
+      0.984 25.6%,
+      0.932 27.9%,
+      0.909 30.3%,
+      0.917 33.2%,
+      1.004 41%,
+      1.027 45.6%,
+      1.025 48.7%,
+      0.992 60.9%,
+      1.002 76%,
+      1
+    );
+    width: fit-content;
+  margin: 3rem auto;
+
+  background-color: hsl(0 0% 0% / 0.3);
+
+  border-radius: 12px; /* Fallback for Firefox and others */
+
+  isolation: isolate; /* Fixes so that z-index of -1 never goes behind the navbar */
+
+  anchor-name: --hovered-link;
+
+  li {
+    font-size: var(--small-text);
+  }
+
+  li:hover {
+    anchor-name: --hovered-link;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    content: "";
+    position: absolute;
+    top: calc(anchor(bottom) - 10px);
+    left: calc(anchor(left) + 1rem);
+    right: calc(anchor(right) + 1rem);
+    bottom: calc(anchor(bottom) + 7px);
+
+    border-radius: 12px;
+
+    position-anchor: --hovered-link;
+
+    transition: var(--navbar-transition);
+  }
+
+  &::before {
+    z-index: -1;
+    background: hsla(34, 67%, 67%, 0.8);
+    backdrop-filter: blur(2px);
+  }
+
+  &::after {
+    z-index: -2;
+    background-image: url("/public/background-image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &:has(a:hover)::before,
+  &:has(a:hover)::after {
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+
+    @supports (corner-shape: squircle) {
+      border-radius: 50%;
+      corner-shape: squircle;
+    }
+  }
+
+  &:has(li:first-of-type a:hover)::after {
+    @supports (corner-shape: squircle) {
+      border-radius: 22px 50% 50% 22px;
+    }
+  }
+
+  &:has(li:last-of-type a:hover)::after {
+    @supports (corner-shape: squircle) {
+      border-radius: 50% 22px 22px 50%;
+    }
+  }
+
+  @supports (corner-shape: squircle) {
+    border-radius: 24px;
+    corner-shape: squircle;
+  }
+
+  > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    padding: 1rem;
+    color: var(--secondary-color);
+  }
+}
