@@ -1,0 +1,51 @@
+.landing-header {
+  background: linear-gradient(hsl(0 0 0 / 0.1), var(--sand-background-dark));
+  h1 {
+    color: var(--secondary-color);
+    text-align: center;
+  }
+}
+
+.landing-container {
+  min-block-size: 100vb;
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns:
+    [full-width-start breakout-left-start] minmax(
+      1rem,
+      1fr
+    ) [content-start breakout-right-start] min(100% - 2rem, 60rem)
+    [content-end breakout-left-end] minmax(
+      1rem,
+      1fr
+    ) [breakout-right-end full-width-end];
+
+  background: linear-gradient(hsl(0 0 100%));
+}
+
+.rooms-container {
+  grid-column: content-start;
+  grid-row: 1;
+}
+
+.booking-container {
+  grid-column: content-end;
+  grid-row: 1;
+
+  @media (max-width: 100em) {
+    grid-column: content-start;
+    grid-row: 2;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size);
+  height: fit-content;
+  background: linear-gradient(
+    var(--sand-background-dark),
+    var(--sand-background-light)
+  );
+}

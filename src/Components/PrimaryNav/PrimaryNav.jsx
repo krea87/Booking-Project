@@ -7,9 +7,9 @@ const PrimaryNav = () => {
     <nav className='primary-navbar'>
         <ul className='primary-navlist'>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Rooms</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
   )
