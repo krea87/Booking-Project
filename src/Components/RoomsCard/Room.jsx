@@ -38,7 +38,7 @@ const Room = ({activeRoom, setActiveRoom}) => {
   return (
     <>
       <h2>Book your room</h2>
-      <div className="rooms-wrapper">
+      <div className="rooms-container">
         <div className="btn-container">
           {rooms.map((room) => (
             <button

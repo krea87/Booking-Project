@@ -1,12 +1,18 @@
 .form-container {
   margin-top: 4rem;
   
+  width: 30em;
   * {
     font-size: var(--font-size);
     }
 
   h3 {
     font-size: var(--sub-title);
+    font-family: var(--second-family);
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--sand);
   }
 
   .activeRoom {
@@ -18,11 +24,13 @@ form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  
+  
   margin-right: 2rem;
   gap: var(--gap);
   input {
     padding: 0.5em;
-    width: 50%;
+    width: 100%;
   }
 
   button {

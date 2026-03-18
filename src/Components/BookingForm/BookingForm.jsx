@@ -8,12 +8,42 @@ const BookingForm = ({ activeRoom }) => {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // create the booking
+    const booking = {
+      id: crypto.randomUUID(), // random ID. Built in Web Api.
+      room: activeRoom.alt,
+      firstname,
+      lastname,
+      checkIn,
+      checkOut,
+      createdAt: new Date().toISOString(), // better format
+    };
+
+    // for localstorage
+    // get from bookings, if empty return null and use an empty array instead
+    const existing = JSON.parse(localStorage.getItem("bookings") || "[]");
+    //save to localstorage bookings
+    localStorage.setItem("bookings", JSON.stringify([...existing, booking]));
+
+    
+    console.log("Booking saved: ", booking);
+
+    // reset
+    setFirstname("");
+    setLastname("");
+    setCheckIn("");
+    setCheckOut("");
+  };
 
   return (
     <div className="form-container">
       <h3>Booking form</h3>
-      <p>Your room = <span className="activeRoom">{activeRoom.alt}</span></p>
+      <p>
+        Your room = <span className="activeRoom">{activeRoom.alt}</span>
+      </p>
       <form onSubmit={handleSubmit}>
         <div className="input-field">
           <input

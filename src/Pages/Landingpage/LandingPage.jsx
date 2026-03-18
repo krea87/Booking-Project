@@ -16,20 +16,31 @@ const LandingPage = () => {
   return (
     <>
       <header className="landing-header">
-        <h1>Hotel California</h1>
+        <h1>Welcome to the Hotel California</h1>
       </header>
 
       <div className="landing-container">
-        <div className="rooms-container">
-          <section id="rooms">
+        <section id="rooms">
+          <div className="rooms-container">
             <Room activeRoom={activeRoom} setActiveRoom={setActiveRoom}></Room>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div className="booking-container">
-          <section id="booking">
+        <section id="booking">
+          <div className="booking-container">
             <BookingForm activeRoom={activeRoom}></BookingForm>
-          </section>
+          </div>
+        </section>
+
+        <div className="info">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio cum
+            minima a cupiditate odit saepe dolorum ut impedit quaerat modi nulla
+            porro ad eos inventore suscipit aspernatur labore aliquam fuga,
+            alias nostrum facere dignissimos quo mollitia quibusdam. Sequi
+            libero doloribus quisquam pariatur magni, est, asperiores cumque
+            voluptas quidem voluptatum veniam.
+          </p>
         </div>
       </div>
       <section id="contact">
