@@ -1,24 +1,28 @@
-h2 {
-  margin-bottom: 1rem;
-  font-size: var(--sub-title);
-}
 
-.rooms-wrapper {
+.rooms-container {
+  
+  h2 {
+    margin-bottom: 1rem;
+    font-size: var(--sub-title);
+    font-family: var(--second-family);
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--sand);
+  }
+  
   .room-image-wrapper {
     width: clamp(2rem, calc(30vw + 10rem), 24rem);
     height: clamp(2rem, calc(10vh + 5rem), 18rem);
     overflow: hidden;
-margin: auto 1rem;
+margin: 3rem;
+ place-self: center;   
+
+
     &.active {
-      top: 1rem;
-      position: absolute;
-      position-anchor: --active;
-      position-area: bottom;
 
       @media (max-width: 35em){
-        position-anchor: unset;
-        position: unset;
-        place-self: center;
+       
         margin-top: 2rem;
         width: 80svw;
       }
@@ -32,10 +36,9 @@ margin: auto 1rem;
 
 .btn-container {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--gap);
 
-  @media (max-width: 35em) {
+  @media (max-width: 55em) {
     flex-direction: column;
     width: 80svw;
     margin: auto;
@@ -54,14 +57,17 @@ margin: auto 1rem;
 
   border-radius: 12px; /* Fallback Firefox */
 
+
+  /* Only supported in certain browsers */
+  
   @supports (corner-shape: squircle) {
     border-radius: 100svh;
-    corner-shape: circle;
+    corner-shape: squircle;
   }
 
   &.active {
     background: linear-gradient(var(--sand), var(--sand-background-dark));
-    anchor-name: --active;
+    
   }
 }
 

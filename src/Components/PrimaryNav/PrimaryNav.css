@@ -34,7 +34,7 @@
 
   isolation: isolate; /* Fixes so that z-index of -1 never goes behind the navbar */
 
-  anchor-name: --hovered-link;
+  anchor-name: --hovered-link; /* Anchor is for anchoring (connecting) an item to another item */
 
   li {
     font-size: var(--small-text);
