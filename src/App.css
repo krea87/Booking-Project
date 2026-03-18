@@ -6,20 +6,27 @@
   --font-family: "Roboto", sans-serif;
   --second-family: "Marcellus", serif;
 
-  --font-size: 1rem;
-  --title-size: clamp(1.5rem, calc(5vw + 1rem), 5rem);
-  --sub-title: clamp(0.33rem, calc(2.5vw + 1rem), 3rem);
+  --font-size: clamp(0.5rem, calc(1vw + .5rem), 1rem);
+  --title-size: clamp(1.5rem, calc(5vw + 2rem), 5rem);
+  --sub-title: clamp(0.7rem, calc(2.5vw + 1.5rem), 3rem);
 
   --gap: 1rem;
+
+  /* Colors */
+
+  --primary-black: hsl(0 0% 0%);
+  --black-background-light: hsla(0 0 0 / 0.4);
+  --black-background-dark: hsla(0 0 0 / 0.8);
+  --primary-white: hsl(0 100% 100%);
+  --sand: hsl(34, 67%, 67%);
+  --sand-background-dark: hsla(34, 67%, 67%, 0.4);
+  --sand-background-light: hsla(34, 67%, 67%, 0.8);
 }
 
 /* ----------------- */
 /*     Utilities     */
 /* ----------------- */
 
-.sr-only {
-  visibility: hidden;
-}
 .sr-only {
   visibility: hidden;
 }
@@ -109,7 +116,6 @@ button {
 
 a {
   text-decoration: none;
-  color: var(--li-color);
 }
 
 img {
@@ -128,10 +134,10 @@ ol[class] {
 
 body {
   background-color: #ffffff;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url("/public/background-image2.jpg");
-  
+  background:
+    linear-gradient(hsl(0 0 0 / 0.1), hsla(0 0 0 / 0.8)),
+    url("/background-image2.jpg");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

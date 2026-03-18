@@ -63,13 +63,13 @@
 
   &::before {
     z-index: -1;
-    background: hsla(34, 67%, 67%, 0.8);
+    background: var(--sand-background-light);
     backdrop-filter: blur(2px);
   }
 
   &::after {
     z-index: -2;
-    background-image: url("/public/background-image2.jpg");
+    background-image: url("/background-image2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,6 +115,6 @@
   a {
     display: block;
     padding: 1rem;
-    color: var(--secondary-color);
+    color: var(--primary-black, #00000a);
   }
 }

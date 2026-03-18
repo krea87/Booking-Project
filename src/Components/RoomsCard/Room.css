@@ -1,0 +1,78 @@
+h2 {
+  margin-bottom: 1rem;
+  font-size: var(--sub-title);
+}
+
+.rooms-wrapper {
+  .room-image-wrapper {
+    width: clamp(2rem, calc(30vw + 10rem), 24rem);
+    height: clamp(2rem, calc(10vh + 5rem), 18rem);
+    overflow: hidden;
+margin: auto 1rem;
+    &.active {
+      top: 1rem;
+      position: absolute;
+      position-anchor: --active;
+      position-area: bottom;
+
+      @media (max-width: 35em){
+        position-anchor: unset;
+        position: unset;
+        place-self: center;
+        margin-top: 2rem;
+        width: 80svw;
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  @media (max-width: 35em) {
+    flex-direction: column;
+    width: 80svw;
+    margin: auto;
+  }
+}
+
+.booking-btn {
+  border: var(--sand) 2px solid;
+  font-size: var(--font-size);
+  padding: 0.5em 1.5em;
+  width: auto;
+  color: var(--primary-black);
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  border-radius: 12px; /* Fallback Firefox */
+
+  @supports (corner-shape: squircle) {
+    border-radius: 100svh;
+    corner-shape: circle;
+  }
+
+  &.active {
+    background: linear-gradient(var(--sand), var(--sand-background-dark));
+    anchor-name: --active;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  @supports (corner-shape: bevel) {
+    corner-shape: round;
+    border-radius: 24px;
+  }
+}
