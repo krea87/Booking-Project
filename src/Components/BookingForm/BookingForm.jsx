@@ -7,6 +7,8 @@ const BookingForm = ({ activeRoom }) => {
   const [lastname, setLastname] = useState("");
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
+  const [adultNum, setAdultNum] = useState(1);
+  const [childNum, setChildNum] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +21,8 @@ const BookingForm = ({ activeRoom }) => {
       lastname,
       checkIn,
       checkOut,
+      adultNum,
+      childNum,
       createdAt: new Date().toISOString(), // better format
     };
 
@@ -28,7 +32,6 @@ const BookingForm = ({ activeRoom }) => {
     //save to localstorage bookings
     localStorage.setItem("bookings", JSON.stringify([...existing, booking]));
 
-    
     console.log("Booking saved: ", booking);
 
     // reset
@@ -36,6 +39,8 @@ const BookingForm = ({ activeRoom }) => {
     setLastname("");
     setCheckIn("");
     setCheckOut("");
+    setAdultNum(1);
+    setChildNum(0);
   };
 
   return (
@@ -83,6 +88,24 @@ const BookingForm = ({ activeRoom }) => {
             onChange={(e) => setCheckOut(e.target.value)}
           />
           <label htmlFor="checkOut">Check out</label>
+        </div>
+        <div className="input-field">
+          <input
+            id="adult"
+            type="number"
+            value={adultNum}
+            onChange={(e) => setAdultNum(e.target.value)}
+          />
+          <label htmlFor="adult">Adults</label>
+        </div>
+        <div className="input-field">
+          <input
+            id="child"
+            type="number"
+            value={childNum}
+            onChange={(e) => setChildNum(e.target.value)}
+          />
+          <label htmlFor="adult">Children</label>
         </div>
         <button type="submit">Book now!</button>
       </form>

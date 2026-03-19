@@ -5,6 +5,7 @@
     text-align: center;
     max-width: 15ch;
     place-self: center;
+    margin-inline: auto;
   }
 }
 
@@ -13,21 +14,23 @@
  display: flex;
  flex-direction: column;
  justify-content: center;
-  
+
 
   background: linear-gradient(hsl(0 0 100% / .99));
 }
 
 .rooms-container {
-place-self: center;
+align-self: center;
+justify-content: center;
 }
 
 .booking-container {
-  place-self: center;
+ align-self: center;
+
 }
 
 .info {
-  place-self: center;
+  align-self: center;
 }
 
 footer {
