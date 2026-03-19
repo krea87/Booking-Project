@@ -1,5 +1,7 @@
 
 .rooms-container {
+  display: flex;
+  flex-direction: column;
   
   h2 {
     margin-bottom: 1rem;
@@ -37,6 +39,7 @@ margin: 3rem;
 .btn-container {
   display: flex;
   gap: var(--gap);
+  justify-content: center;
 
   @media (max-width: 55em) {
     flex-direction: column;
@@ -49,7 +52,6 @@ margin: 3rem;
   border: var(--sand) 2px solid;
   font-size: var(--font-size);
   padding: 0.5em 1.5em;
-  width: auto;
   color: var(--primary-black);
   font-weight: 400;
   text-transform: uppercase;
@@ -81,4 +83,20 @@ img {
     corner-shape: round;
     border-radius: 24px;
   }
+}
+
+.room-info {
+ /*  background: linear-gradient(var(--sand-background-light), hsl(0 0% 100% / .9 ));
+  background: linear-gradient(hsl(0 0% 100% / .9 ), hsla(34, 96%, 50%, 0.5)); */
+
+  border: 3px dotted var(--sand);
+  margin: 2rem;
+  padding: 2rem;
+  
+  h4 {
+    font-weight: 600;
+  }
+  p {
+    font-size: var(--font-size);
+}
 }

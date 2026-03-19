@@ -5,29 +5,27 @@
     text-align: center;
     max-width: 15ch;
     place-self: center;
+    margin-inline: auto;
   }
 }
 
 .landing-container {
   min-block-size: 100vb;
- display: flex;
- flex-direction: column;
- justify-content: center;
-  
-
-  background: linear-gradient(hsl(0 0 100% / .99));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden; /*  Hidden works for now. 'overflow-x: clip;' can be a better option incase an extra scrollbar on the Y-axis appears. In this case I don't
+  think it will */
+  background: linear-gradient(hsl(0 0 100% / 0.99));
 }
 
 .rooms-container {
-place-self: center;
+  align-self: center;
+  justify-content: center;
 }
 
 .booking-container {
-  place-self: center;
-}
-
-.info {
-  place-self: center;
+  align-self: center;
 }
 
 footer {
