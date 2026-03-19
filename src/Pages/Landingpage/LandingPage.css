@@ -11,25 +11,20 @@
 
 .landing-container {
   min-block-size: 100vb;
- display: flex;
- flex-direction: column;
- justify-content: center;
-
-
-  background: linear-gradient(hsl(0 0 100% / .99));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden; /*  Hidden works for now. 'overflow-x: clip;' can be a better option incase an extra scrollbar on the Y-axis appears. In this case I don't
+  think it will */
+  background: linear-gradient(hsl(0 0 100% / 0.99));
 }
 
 .rooms-container {
-align-self: center;
-justify-content: center;
+  align-self: center;
+  justify-content: center;
 }
 
 .booking-container {
- align-self: center;
-
-}
-
-.info {
   align-self: center;
 }
 
