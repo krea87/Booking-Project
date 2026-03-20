@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import presidential from "../../assets/images/presidential.jpg";
-import suite from "../../assets/images/suite.jpg";
-import deluxe from "../../assets/images/deluxe.jpg";
-import standard from "../../assets/images/standard.jpg";
+import presidential from "../../assets/images/presidential.webp";
+import suite from "../../assets/images/suite.webp";
+import deluxe from "../../assets/images/deluxe.webp";
+import standard from "../../assets/images/standard.webp";
 import "../../App.css";
 import "./Room.css";
 import RoomInfo from "../RoomInfo/RoomInfo";
@@ -11,7 +11,6 @@ const Room = ({ activeRoom, setActiveRoom }) => {
   const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
-
     /* AI generated text cuz of my lack of imagination ;D */
     const fakeApi = [
       {
@@ -69,7 +68,7 @@ const Room = ({ activeRoom, setActiveRoom }) => {
             key={room.id}
             className={`room-image-wrapper ${activeRoom.id === room.id ? "active" : ""} ${activeRoom.id !== room.id ? "hidden" : ""}`}
           >
-            <img src={room.image} alt={room.alt} />
+            <img src={room.image} alt={room.alt} width="330" height="165" />
           </div>
         ))}
         <div className="room-info">
