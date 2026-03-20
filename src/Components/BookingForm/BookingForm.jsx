@@ -55,6 +55,12 @@ const BookingForm = ({ activeRoom }) => {
     dialogRef.current.showModal();
   };
 
+  const handleBackdropClose = (e) => {
+    if (e.target === dialogRef.current){
+      dialogRef.current.close();
+    }
+  };
+
   return (
     <>
       <div className="form-container">
@@ -131,10 +137,11 @@ const BookingForm = ({ activeRoom }) => {
         </form>
       </div>
       <div className="confirmed-booking-modal">
-        <dialog ref={dialogRef}>
+        <dialog ref={dialogRef} onClick={handleBackdropClose}>
           {confirmedBooking && (
             <BookingConfirmation
               confirmedBooking={confirmedBooking}
+              onClose={() => dialogRef.current.close()}
             ></BookingConfirmation>
           )}
         </dialog>

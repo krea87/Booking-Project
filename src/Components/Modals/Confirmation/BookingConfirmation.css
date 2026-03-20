@@ -1,14 +1,19 @@
 .confirmed-booking {
    font-size: var(--font-size);
-
+   
    h3 {
     font-family: var(--second-family);
-    text-decoration: underline;
-    text-decoration-color: var(--sand);
    }
    
    span {
     font-weight: 600;
    }
 
+   img{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+   }
 }
