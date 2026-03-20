@@ -7,7 +7,7 @@ const RoomInfo = ({ activeRoom }) => {
 
   return (
     <div>
-      <h4>{activeRoom.alt}</h4>
+      <h3>{activeRoom.alt}</h3>
       <p>{activeRoom.text}</p>
     </div>
   );

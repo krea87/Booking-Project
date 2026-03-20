@@ -69,7 +69,7 @@
 
   &::after {
     z-index: -2;
-    background-image: url("/background-image2.jpg");
+    background-image: url("/background-image.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

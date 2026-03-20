@@ -1,8 +1,7 @@
-
 .rooms-container {
   display: flex;
   flex-direction: column;
-  
+
   h2 {
     margin-bottom: 1rem;
     font-size: var(--sub-title);
@@ -12,19 +11,16 @@
     text-decoration: underline;
     text-decoration-color: var(--sand);
   }
-  
+
   .room-image-wrapper {
     width: clamp(2rem, calc(30vw + 10rem), 24rem);
-    height: clamp(2rem, calc(10vh + 5rem), 18rem);
+    aspect-ratio: 2/1;
     overflow: hidden;
-margin: 3rem;
- place-self: center;   
-
+    margin: 3rem;
+    place-self: center;
 
     &.active {
-
-      @media (max-width: 35em){
-       
+      @media (max-width: 35em) {
         margin-top: 2rem;
         width: 80svw;
       }
@@ -59,9 +55,8 @@ margin: 3rem;
 
   border-radius: 12px; /* Fallback Firefox */
 
-
   /* Only supported in certain browsers */
-  
+
   @supports (corner-shape: squircle) {
     border-radius: 100svh;
     corner-shape: squircle;
@@ -69,7 +64,6 @@ margin: 3rem;
 
   &.active {
     background: linear-gradient(var(--sand), var(--sand-background-dark));
-    
   }
 }
 
@@ -86,17 +80,17 @@ img {
 }
 
 .room-info {
- /*  background: linear-gradient(var(--sand-background-light), hsl(0 0% 100% / .9 ));
+  /*  background: linear-gradient(var(--sand-background-light), hsl(0 0% 100% / .9 ));
   background: linear-gradient(hsl(0 0% 100% / .9 ), hsla(34, 96%, 50%, 0.5)); */
 
   border: 3px dotted var(--sand);
   margin: 2rem;
   padding: 2rem;
-  
-  h4 {
+
+  h3 {
     font-weight: 600;
   }
   p {
     font-size: var(--font-size);
-}
+  }
 }

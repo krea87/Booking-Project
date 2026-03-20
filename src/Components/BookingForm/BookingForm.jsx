@@ -131,7 +131,7 @@ const BookingForm = ({ activeRoom }) => {
               onChange={(e) => setChildNum(e.target.value)}
               required
             />
-            <label htmlFor="adult">Children</label>
+            <label htmlFor="child">Children</label>
           </div>
           <button type="submit">Book now!</button>
         </form>
