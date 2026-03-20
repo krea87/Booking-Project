@@ -28,14 +28,36 @@
   align-self: center;
 }
 
-footer {
+.contact-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--gap);
   font-size: var(--font-size);
   height: fit-content;
-  background: linear-gradient(
-    var(--sand-background-dark),
-    var(--sand-background-light)
-  );
+  border-top: 4px solid var(--primary-black);
+  border-bottom: 4px solid var(--primary-black);
+  border-left: 2px solid var(--primary-black);
+  border-right: 2px solid var(--primary-black);
+}
+.contact-list {
+  color: var(--primary-white);
+  font-size: var(--font-size);
+  font-weight: 600;
+}
+
+.back-to-top {
+  z-index: 100;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: .5;
+  
+  img {
+    
+     width: 2rem;
+  }
+
+  &:hover{
+    opacity: 1;
+  }
 }
