@@ -3,6 +3,7 @@
    text-align: center;
   display: grid;
   place-content: center;
+  gap: var(--gap);
   
   * {
     font-size: var(--font-size);
@@ -50,11 +51,7 @@ form {
     
   }
 
-  input[type="number"] {
-    field-sizing: content;
-    width: fit-content;
-    
-  }
+
 
   
 

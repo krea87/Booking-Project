@@ -50,14 +50,21 @@
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  opacity: .5;
-  
+  opacity: 0.5;
+  animation: show-on-scroll linear;
+  animation-timeline: scroll();
   img {
-    
-     width: 2rem;
+    width: 2rem;
   }
 
-  &:hover{
+  &:hover {
+    opacity: 1;
+  }
+
+}
+
+@keyframes show-on-scroll {
+  to {
     opacity: 1;
   }
 }
